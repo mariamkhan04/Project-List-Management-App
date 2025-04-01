@@ -1,59 +1,3 @@
-// import { useState } from 'react';
-// import ProjectEntryForm from './components/ProjectEntryForm';
-// import ProjectList from './components/ProjectList';
-// import './styles/App.css';
-
-// function App() {
-//   const [projects,setProjects] = useState([
-//     {id: 1, content: "DIP with Python"},
-//     {id: 2, content: "FYP with undergrads"},
-//     {id: 3, content: "PHD with crazy people"},
-//   ]);
-
-//   const deleteProject = (id) => {
-//     setProjects(projects.filter(project => project.id !== id));
-//   }
-
-//   const addProject = (newProject) => {
-//     setProjects([
-//       {
-//         id: Date.now(), // better than Math.random()
-//         content: newProject.trim()
-//       },
-//       ...projects
-//     ]);
-//   }
-
-//   const editProject = (id, newContent) => {
-//     setProjects(projects.map(project => 
-//       project.id === id ? { ...project, content: newContent.trim() } : project
-//     ));
-//   };
-
-//   const deleteAllProjects = () => {
-//     if (window.confirm("Are you sure you want to delete all projects?")) {
-//       setProjects([]);
-//     }
-//   };
-
-//   return (
-//     <div className="app">
-//     <h1>Projects List</h1>
-//     <h4>Management App</h4>
-//     <div className="projects">
-//       <ProjectEntryForm onAdd={addProject} />
-//       <ProjectList 
-//         projects={projects}
-//         onDelete={deleteProject}
-//         onEdit={editProject}
-//         onDeleteAll={deleteAllProjects}
-//       />
-//     </div>
-//   </div>
-//   );
-// }
-
-// export default App;
 
 import { useState, useEffect } from 'react';
 import ProjectEntryForm from './components/ProjectEntryForm';
@@ -163,3 +107,59 @@ function App() {
 }
 
 export default App;
+          // import { useState } from 'react';
+          // import ProjectEntryForm from './components/ProjectEntryForm';
+          // import ProjectList from './components/ProjectList';
+          // import './styles/App.css';
+          
+          // function App() {
+          //   const [projects,setProjects] = useState([
+          //     {id: 1, content: "DIP with Python"},
+          //     {id: 2, content: "FYP with undergrads"},
+          //     {id: 3, content: "PHD with crazy people"},
+          //   ]);
+          
+          //   const deleteProject = (id) => {
+          //     setProjects(projects.filter(project => project.id !== id));
+          //   }
+          
+          //   const addProject = (newProject) => {
+          //     setProjects([
+          //       {
+          //         id: Date.now(), // better than Math.random()
+          //         content: newProject.trim()
+          //       },
+          //       ...projects
+          //     ]);
+          //   }
+          
+          //   const editProject = (id, newContent) => {
+          //     setProjects(projects.map(project => 
+          //       project.id === id ? { ...project, content: newContent.trim() } : project
+          //     ));
+          //   };
+          
+          //   const deleteAllProjects = () => {
+          //     if (window.confirm("Are you sure you want to delete all projects?")) {
+          //       setProjects([]);
+          //     }
+          //   };
+          
+          //   return (
+          //     <div className="app">
+          //     <h1>Projects List</h1>
+          //     <h4>Management App</h4>
+          //     <div className="projects">
+          //       <ProjectEntryForm onAdd={addProject} />
+          //       <ProjectList 
+          //         projects={projects}
+          //         onDelete={deleteProject}
+          //         onEdit={editProject}
+          //         onDeleteAll={deleteAllProjects}
+          //       />
+          //     </div>
+          //   </div>
+          //   );
+          // }
+          
+          // export default App;
