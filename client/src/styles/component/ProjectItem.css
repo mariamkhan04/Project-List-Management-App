@@ -1,0 +1,25 @@
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  
+  .project-item:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+  }
+  
+  .project-item span {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 0.5rem;
+  }
+  
+  .project-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
