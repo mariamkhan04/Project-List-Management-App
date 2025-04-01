@@ -1,17 +1,17 @@
-const API_BASE_URL = 'https://project-list-management-app-api.vercel.app/api';
+// const API_BASE_URL = 'https://project-list-management-app-api.vercel.app/api';
 
 export const fetchProjects = async () => {
-  const response = await fetch(`${API_BASE_URL}/projects`);
+  const response = await fetch(`https://project-list-management-app-api.vercel.app/api/projects`);
   return response.json();
 };
 
 export const fetchProjectCount = async () => {
-  const response = await fetch(`${API_BASE_URL}/projects/count`);
+  const response = await fetch(`https://project-list-management-app-api.vercel.app/api/projects/count`);
   return response.json();
 };
 
 export const addProject = async (name) => {
-  const response = await fetch(`${API_BASE_URL}/projects`, {
+  const response = await fetch(`https://project-list-management-app-api.vercel.app/api/projects`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export const addProject = async (name) => {
 };
 
 export const updateProject = async (id, name) => {
-  const response = await fetch(`${API_BASE_URL}/projects/${id}`, {
+  const response = await fetch(`https://project-list-management-app-api.vercel.app/api/projects/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -33,14 +33,14 @@ export const updateProject = async (id, name) => {
 };
 
 export const deleteProject = async (id) => {
-  const response = await fetch(`${API_BASE_URL}/projects/${id}`, {
+  const response = await fetch(`https://project-list-management-app-api.vercel.app/api/projects/${id}`, {
     method: 'DELETE',
   });
   return response.json();
 };
 
 export const deleteAllProjects = async () => {
-  const response = await fetch(`${API_BASE_URL}/projects`, {
+  const response = await fetch(`https://project-list-management-app-api.vercel.app/api/projects`, {
     method: 'DELETE',
   });
   return response.json();
