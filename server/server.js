@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 // Enable CORS for all routes
 app.use(cors({
-    origin: 'http://localhost:5173', // or your frontend URL
+    origin: ['http://localhost:5173','https://project-list-management-app-frontend.netlify.app/'], // or your frontend URL
     methods: "GET,POST,PUT,DELETE",
     credentials: true, // Allow credentials if needed
   }));
