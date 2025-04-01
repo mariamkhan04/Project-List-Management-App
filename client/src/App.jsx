@@ -22,14 +22,26 @@ function App() {
     try {
       setLoading(true);
       setError(null);
-      const [projectsData, countData] = await Promise.all([
-        fetchProjects(),
-        fetchProjectCount()
-      ]);
+      
+      // First get projects - this is our source of truth
+      const projectsData = await fetchProjects();
       setProjects(projectsData.projects);
-      setProjectCount(countData.count);
+      
+      // Then get count (optional - only if you need separate count)
+      try {
+        const countData = await fetchProjectCount();
+        setProjectCount(countData.count);
+      } catch (countError) {
+        // If count fails, fall back to projects length
+        setProjectCount(projectsData.projects.length);
+        console.warn('Count fetch failed, using projects length:', countError);
+      }
+      
     } catch (err) {
       setError(err.message);
+      // Reset to empty state on complete failure
+      setProjects([]);
+      setProjectCount(0);
     } finally {
       setLoading(false);
     }
